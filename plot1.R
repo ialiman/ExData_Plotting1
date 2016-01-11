@@ -16,5 +16,6 @@ smallerhh$histset <-as.numeric(as.character(smallhh$Global_active_power))
 hist(as.numeric(smallerhh$histset), main="Global Active Power", col="red", ylab="Frequency", freq=TRUE, nclass=15,  xlab='Global Active Power (kilowatts)')
 
 png("plot1.png", width = 480, height = 480)
-smallerhh$Global_active_power <-as.numeric(as.character(smallhh$Global_active_power))
+hist(as.numeric(smallerhh$histset), main="Global Active Power", col="red", ylab="Frequency", freq=TRUE, nclass=15,  xlab='Global Active Power (kilowatts)')
+
 dev.off()
