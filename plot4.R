@@ -18,6 +18,7 @@ smallhh$Global_active_power <-as.numeric(as.character(smallhh$Global_active_powe
 smallhh$Global_reactive_power <-as.numeric(as.character(smallhh$Global_reactive_power))
 
 ###
+png("plot4.png", width = 480, height = 480)
 par(mfrow=c(2,2))
 #1
 hist(as.numeric(smallhh$Global_active_power), main="Global Active Power", col="red", ylab="Frequency", freq=TRUE, xlab='Global Active Power (kilowatts)')
@@ -35,3 +36,4 @@ legend("topright", legend=c("Sub_metering_1", "Sub_metering_2","Sub_metering_3")
 plot(smallhh$dt,smallhh$Global_reactive_power, type="l", xlab="datetime", ylim=range(0.0, 0.55), yaxt="n", ylab="Global_reactive_power")
 par(new=T)
 axis(side=2, at=c(0,0.1,0.2, 0.3, 0.4, 0.5))
+dev.off()
